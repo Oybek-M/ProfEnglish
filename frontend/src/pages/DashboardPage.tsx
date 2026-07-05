@@ -8,8 +8,13 @@ export default function DashboardPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [lesson, setLesson] = useState<Lesson | null>(null);
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
+
+  function handleLogout() {
+    logout();
+    navigate('/login');
+  }
 
   function fetchLesson() {
     setLoading(true);
@@ -38,7 +43,14 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 relative">
+      <button
+        type="button"
+        onClick={handleLogout}
+        className="absolute top-4 right-4 text-sm text-gray-500 hover:text-gray-700"
+      >
+        Chiqish
+      </button>
       <div className="bg-white p-8 rounded-xl shadow-md max-w-md w-full text-center">
         {loading && (
           <>
