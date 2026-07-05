@@ -77,4 +77,9 @@ export const api = {
         completedAt: string;
       }>;
     }>('/evaluation/my-progress'),
+  updateProfile: (fields: Partial<Pick<User, 'firstName' | 'lastName' | 'gender' | 'birthDate'>>) =>
+    request<{ user: User }>('/auth/profile', {
+      method: 'PATCH',
+      body: JSON.stringify(fields),
+    }),
 };

@@ -5,6 +5,10 @@ export interface User {
   level: string | null;
   goal: string | null;
   targetLevel?: 'a1' | 'a2' | 'b1' | 'b2' | 'c1' | 'c2' | null;
+  firstName?: string | null;
+  lastName?: string | null;
+  gender?: 'male' | 'female' | 'other' | null;
+  birthDate?: string | null;
   createdAt: string;
 }
 

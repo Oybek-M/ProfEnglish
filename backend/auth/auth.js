@@ -27,6 +27,10 @@ async function registerUser(email, password) {
     profession: null,
     level: null,
     goal: null,
+    firstName: null,
+    lastName: null,
+    gender: null,
+    birthDate: null,
     createdAt: new Date().toISOString(),
   };
   users.push(user);
