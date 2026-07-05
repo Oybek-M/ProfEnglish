@@ -115,8 +115,9 @@ export default function OnboardingPage() {
             </div>
             {error && <p className="text-red-600 text-sm mt-4">{error}</p>}
             <button
+              disabled={answers.some((a) => a === -1)}
               onClick={() => setStep(3)}
-              className="mt-8 w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold"
+              className="mt-8 w-full bg-indigo-600 disabled:bg-gray-300 text-white py-3 rounded-lg font-semibold"
             >
               Keyingisi
             </button>
