@@ -51,10 +51,10 @@ export const api = {
       body: JSON.stringify({ email, password }),
     }),
   getLevelTest: () => request<{ questions: LevelTestQuestion[] }>('/onboarding/level-test'),
-  completeOnboarding: (profession: string, answerIndexes: number[], goal: string) =>
+  completeOnboarding: (profession: string, answerIndexes: number[], goal: string, targetLevel: string) =>
     request<{ user: User; levelTestScore: number }>('/onboarding/complete', {
       method: 'POST',
-      body: JSON.stringify({ profession, answerIndexes, goal }),
+      body: JSON.stringify({ profession, answerIndexes, goal, targetLevel }),
     }),
   getCurrentLesson: () => request<{ lesson: Lesson }>('/lesson/current'),
   sendChatMessage: (cacheKey: string, history: any[], message: string) =>
@@ -67,4 +67,14 @@ export const api = {
       method: 'POST',
       body: JSON.stringify({ cacheKey, finalAnswer }),
     }),
+  getMyProgress: () =>
+    request<{
+      progress: Array<{
+        userId: string;
+        lessonKey: string;
+        finalAnswer: string;
+        evaluation: EvaluationResult;
+        completedAt: string;
+      }>;
+    }>('/evaluation/my-progress'),
 };
