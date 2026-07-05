@@ -12,6 +12,28 @@
 
 ---
 
+## POST-MVP ENHANCEMENTS LOG (read this first if resuming a fresh session)
+
+All 19 tasks above are complete, reviewed, and deployed-ready (see `DOCs/deploy/smoke-test-checklist.md` for the executed golden-path verification). After the original MVP was done, the founder reviewed it hands-on and requested further polish. This log tracks that follow-up work, updated incrementally (one entry per commit) so a fresh session can resume safely if this one is interrupted (context limit, disconnect, etc.) — **each entry below corresponds to one already-pushed commit on `origin/main`, in order.**
+
+Standing rules for all follow-up work (same as the original 19 tasks): no `Co-Authored-By` trailer in any commit ever; all visible UI text in Uzbek Latin script; no new npm dependencies; TailwindCSS v3 + hand-written inline SVG only, no icon libraries.
+
+### Round 1 — Landing/Login/Register redesign + honesty fixes
+- `4ea9581` feat: redesign landing page (hero with coded AI-chat product-preview mockup, features, how-it-works, professions, pricing teaser, footer)
+- `ceaa765` fix: translate remaining English pricing copy to Uzbek
+- `f4d0860` feat: redesign login/register pages with polished card UI (gradient icon badge, icon-prefixed inputs) — deliberately NOT added: "Continue with Google" (no OAuth backend exists, would be a false promise)
+
+### Round 2 — Onboarding + Dashboard UX overhaul (planned by an Opus sub-agent, see rationale in that plan if still present at `DOCs/superpowers/plans/` scratch location — otherwise this log is the source of truth)
+- `b3b4731` feat: redesign dashboard — header with greeting+logout, stat cards (Bugun dars / Jami darslar / O'rtacha ball — **only rendered when real `progress.json` data exists, never fabricated**), lesson hero card (profession badge, duration, level, mission blurb), recent-progress list (score shown as `X/10`, matching `EvaluationResult.overallScore`'s real scale)
+- `1d8794a` feat: onboarding UX — (1) explicit "← Bosh sahifa" link on Login/Register, (2) disabled "Ko'p kasb sohalari — tez kunda" 3rd card in profession step (signals roadmap without fabricating unbuilt professions), (3) self-assessment pre-test step (`preTestPhase: 'ask'|'confirm'|'test'` — purely a UX priming step, the 10-question test remains the sole source of truth for the persisted `level`, zero backend risk), (4) `targetLevel` (a1-c2) question added to the goal step, persisted via a new whitelisted backend field (`backend/routes/onboardingRoutes.js` `VALID_TARGET_LEVELS`, `frontend/src/types/index.ts` `User.targetLevel`) — additive only, not yet read by lesson generation
+- `4980465` fix: Dashboard's date used `toLocaleDateString('uz-Latn-UZ', ...)` which the browser's ICU data doesn't fully support (rendered broken tokens like "M07 5, Sun") — replaced with a manual `UZ_WEEKDAYS`/`UZ_MONTHS` lookup + `formatUzDate()` helper for guaranteed-correct output regardless of browser locale support
+
+### Round 3 — Professionalism polish (in progress)
+- `eb9fb1a` fix: replaced all colorful emoji icons (💻💼👋⏱➕🎉) with hand-drawn inline SVG icons across Dashboard/Onboarding/Result pages — founder's explicit feedback: emoji-as-icons read as unpolished/AI-generated to investors and partners. Kept plain typographic symbols (✓, ▸) on the landing page as-is since those don't carry the same "unprofessional" signal.
+- **Next up (not yet started as of this log entry):** optional profile fields (First/Last name, gender, birth date — NOT required at register, addable later) + a Dashboard-accessible profile view/edit page. Also considering: showing the AI-generated lesson's full structure/plan as an upfront outline (vocab count, exercise count, roleplay character, final task) somewhere in the Dashboard or Lesson info block, to make the "AI generates a real personalized curriculum" story more visible — pending founder confirmation before implementing.
+
+---
+
 ## Task 1: Backend skeleton
 
 **Files:**
