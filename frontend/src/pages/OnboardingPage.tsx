@@ -5,9 +5,24 @@ import { useAuth } from '../context/AuthContext';
 import type { LevelTestQuestion } from '../types';
 
 const PROFESSIONS = [
-  { id: 'it', label: 'IT / Dasturlash', icon: '💻' },
-  { id: 'business', label: 'Business', icon: '💼' },
+  { id: 'it', label: 'IT / Dasturlash' },
+  { id: 'business', label: 'Business' },
 ];
+
+function ProfessionIcon({ id }: { id: string }) {
+  if (id === 'it') {
+    return (
+      <svg className="w-9 h-9 mx-auto text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+      </svg>
+    );
+  }
+  return (
+    <svg className="w-9 h-9 mx-auto text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2v-8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+      </svg>
+  );
+}
 
 const GOALS = [
   { id: 'job', label: 'Ishga kirish' },
@@ -91,12 +106,14 @@ export default function OnboardingPage() {
                     profession === p.id ? 'border-indigo-600 bg-indigo-50' : 'border-gray-200'
                   }`}
                 >
-                  <div className="text-4xl mb-2">{p.icon}</div>
+                  <div className="mb-2"><ProfessionIcon id={p.id} /></div>
                   <div className="font-semibold">{p.label}</div>
                 </button>
               ))}
               <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border-2 border-dashed border-gray-300 flex flex-col items-center justify-center opacity-75 cursor-not-allowed">
-                <div className="text-3xl mb-2">➕</div>
+                <svg className="w-8 h-8 mb-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                </svg>
                 <div className="font-semibold text-gray-700 mb-1">Ko'p kasb sohalari</div>
                 <div className="text-sm text-gray-600 mb-2">Sog'liq, Marketing, Huquq, Tahlil va boshqa</div>
                 <div className="text-xs font-semibold text-gray-500">Tez kunda</div>

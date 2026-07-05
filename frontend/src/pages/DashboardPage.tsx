@@ -93,9 +93,7 @@ export default function DashboardPage() {
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6 flex justify-between items-start">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">
-              Xush kelibsiz! 👋
-            </h1>
+            <h1 className="text-3xl font-bold text-gray-900">Xush kelibsiz!</h1>
             <p className="text-sm text-gray-500 mt-1">{formatUzDate(new Date())}</p>
           </div>
           <button
@@ -163,11 +161,23 @@ export default function DashboardPage() {
             {/* Header */}
             <div className="bg-gradient-to-r from-indigo-600 to-violet-600 px-6 py-4 flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <span className="px-3 py-1 bg-white/20 text-white rounded-full text-xs font-semibold">
-                  {user?.profession === 'it' ? '💻 IT' : '💼 Business'}
+                <span className="px-3 py-1 bg-white/20 text-white rounded-full text-xs font-semibold flex items-center gap-1">
+                  {user?.profession === 'it' ? (
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                    </svg>
+                  ) : (
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2v-8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                  )}
+                  {user?.profession === 'it' ? 'IT' : 'Biznes'}
                 </span>
-                <span className="text-white/80 text-sm">
-                  ⏱ {lesson.durationMinutes || 30} min
+                <span className="text-white/80 text-sm flex items-center gap-1">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {lesson.durationMinutes || 30} min
                 </span>
               </div>
               <span className="text-white/80 text-sm font-semibold">
