@@ -23,11 +23,16 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-indigo-50 via-gray-50 to-gray-50 px-4">
       <div className="w-full max-w-sm">
-        <Link to="/" className="flex justify-center mb-6">
-          <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
-            ProfEnglish
-          </span>
-        </Link>
+        <div className="text-center mb-6">
+          <Link to="/" className="inline-block">
+            <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent block mb-1">
+              ProfEnglish
+            </span>
+            <span className="text-xs text-gray-400 hover:text-gray-600 transition">
+              ← Bosh sahifa
+            </span>
+          </Link>
+        </div>
 
         <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
           <div className="flex justify-center mb-4">

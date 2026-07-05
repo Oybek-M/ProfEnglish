@@ -4,6 +4,7 @@ export interface User {
   profession: 'it' | 'business' | null;
   level: string | null;
   goal: string | null;
+  targetLevel?: 'a1' | 'a2' | 'b1' | 'b2' | 'c1' | 'c2' | null;
   createdAt: string;
 }
 

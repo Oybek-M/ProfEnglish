@@ -16,12 +16,24 @@ const GOALS = [
   { id: 'career', label: "Karyera o'sishi" },
 ];
 
+const TARGET_LEVELS = [
+  { id: 'a1', label: "A1 - Boshlang'ich" },
+  { id: 'a2', label: 'A2 - Elementar' },
+  { id: 'b1', label: "B1 - O'rta" },
+  { id: 'b2', label: "B2 - Yuqori o'rta" },
+  { id: 'c1', label: "C1 - Ilg'or" },
+  { id: 'c2', label: 'C2 - Ustoz' },
+];
+
 export default function OnboardingPage() {
   const [step, setStep] = useState(1);
   const [profession, setProfession] = useState('');
   const [questions, setQuestions] = useState<LevelTestQuestion[]>([]);
   const [answers, setAnswers] = useState<number[]>([]);
   const [goal, setGoal] = useState('');
+  const [targetLevel, setTargetLevel] = useState('');
+  const [preTestPhase, setPreTestPhase] = useState<'ask' | 'confirm' | 'test'>('ask');
+  const [selfAssessedLevel, setSelfAssessedLevel] = useState('');
   const [error, setError] = useState('');
   const { setUser } = useAuth();
   const navigate = useNavigate();
@@ -45,8 +57,12 @@ export default function OnboardingPage() {
       setError('Barcha savollarga javob bering');
       return;
     }
+    if (!goal || !targetLevel) {
+      setError('Maqsad va maqsadiy darajani tanlang');
+      return;
+    }
     try {
-      const res = await api.completeOnboarding(profession, answers, goal);
+      const res = await api.completeOnboarding(profession, answers, goal, targetLevel);
       setUser(res.user);
       navigate('/dashboard');
     } catch (err) {
@@ -66,7 +82,7 @@ export default function OnboardingPage() {
         {step === 1 && (
           <div>
             <h2 className="text-2xl font-bold mb-6">Kasbingizni tanlang</h2>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {PROFESSIONS.map((p) => (
                 <button
                   key={p.id}
@@ -79,10 +95,20 @@ export default function OnboardingPage() {
                   <div className="font-semibold">{p.label}</div>
                 </button>
               ))}
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border-2 border-dashed border-gray-300 flex flex-col items-center justify-center opacity-75 cursor-not-allowed">
+                <div className="text-3xl mb-2">➕</div>
+                <div className="font-semibold text-gray-700 mb-1">Ko'p kasb sohalari</div>
+                <div className="text-sm text-gray-600 mb-2">Sog'liq, Marketing, Huquq, Tahlil va boshqa</div>
+                <div className="text-xs font-semibold text-gray-500">Tez kunda</div>
+              </div>
             </div>
             <button
               disabled={!profession}
-              onClick={() => setStep(2)}
+              onClick={() => {
+                setPreTestPhase('ask');
+                setSelfAssessedLevel('');
+                setStep(2);
+              }}
               className="mt-8 w-full bg-indigo-600 disabled:bg-gray-300 text-white py-3 rounded-lg font-semibold"
             >
               Keyingisi
@@ -90,7 +116,72 @@ export default function OnboardingPage() {
           </div>
         )}
 
-        {step === 2 && (
+        {step === 2 && preTestPhase === 'ask' && (
+          <div>
+            <h2 className="text-2xl font-bold mb-6">Ingliz tilida o'zingizni qanday darajada deb hisobayapsiz?</h2>
+            <div className="space-y-3 mb-8">
+              {[
+                { id: 'dontknow', label: 'Bilmayman' },
+                { id: 'a1-a2', label: 'A1-A2 (Boshlang\'ich)' },
+                { id: 'b1', label: 'B1 (O\'rta)' },
+                { id: 'b2', label: 'B2 (Yuqori o\'rta)' },
+                { id: 'c1-c2', label: 'C1-C2 (Ilg\'or)' },
+              ].map((level) => (
+                <button
+                  key={level.id}
+                  onClick={() => {
+                    setSelfAssessedLevel(level.id);
+                    if (level.id === 'dontknow') {
+                      setPreTestPhase('test');
+                    } else {
+                      setPreTestPhase('confirm');
+                    }
+                  }}
+                  className={`w-full text-left p-4 rounded-lg border-2 transition ${
+                    selfAssessedLevel === level.id ? 'border-indigo-600 bg-indigo-50' : 'border-gray-200 hover:border-gray-300'
+                  }`}
+                >
+                  <span className="font-medium text-gray-900">{level.label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {step === 2 && preTestPhase === 'confirm' && selfAssessedLevel && (
+          <div>
+            <h2 className="text-2xl font-bold mb-6">
+              Siz {
+                selfAssessedLevel === 'a1-a2' ? 'A1-A2' :
+                selfAssessedLevel === 'b1' ? 'B1' :
+                selfAssessedLevel === 'b2' ? 'B2' :
+                'C1-C2'
+              } darajasida ekanligingizdan ishonchli?
+            </h2>
+            <p className="text-gray-600 mb-8">
+              Aniqlanish uchun qisqa test o'tishing mumkin. Hammasi juda sodda!
+            </p>
+            <div className="space-y-3">
+              <button
+                onClick={() => setPreTestPhase('test')}
+                className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg font-semibold transition"
+              >
+                Ha, testni o'tib davom et →
+              </button>
+              <button
+                onClick={() => {
+                  setPreTestPhase('ask');
+                  setSelfAssessedLevel('');
+                }}
+                className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 py-3 rounded-lg font-semibold transition"
+              >
+                Aniqlansin ← (Xo'p, shuning uchun test kerak)
+              </button>
+            </div>
+          </div>
+        )}
+
+        {step === 2 && preTestPhase === 'test' && (
           <div>
             <h2 className="text-2xl font-bold mb-6">Daraja aniqlovchi test</h2>
             <div className="space-y-6">
@@ -127,22 +218,44 @@ export default function OnboardingPage() {
         {step === 3 && (
           <div>
             <h2 className="text-2xl font-bold mb-6">Maqsadingiz nima?</h2>
-            <div className="space-y-3">
-              {GOALS.map((g) => (
-                <button
-                  key={g.id}
-                  onClick={() => setGoal(g.id)}
-                  className={`w-full text-left p-4 rounded-lg border-2 ${
-                    goal === g.id ? 'border-indigo-600 bg-indigo-50' : 'border-gray-200'
-                  }`}
-                >
-                  {g.label}
-                </button>
-              ))}
+
+            <div className="mb-8">
+              <p className="text-sm font-semibold text-gray-700 mb-3">Nima uchun o'rganyapsiz?</p>
+              <div className="space-y-3">
+                {GOALS.map((g) => (
+                  <button
+                    key={g.id}
+                    onClick={() => setGoal(g.id)}
+                    className={`w-full text-left p-4 rounded-lg border-2 ${
+                      goal === g.id ? 'border-indigo-600 bg-indigo-50' : 'border-gray-200'
+                    }`}
+                  >
+                    {g.label}
+                  </button>
+                ))}
+              </div>
             </div>
+
+            <div>
+              <p className="text-sm font-semibold text-gray-700 mb-3">Maqsadiy darajangiz qaysi?</p>
+              <div className="grid grid-cols-2 gap-3">
+                {TARGET_LEVELS.map((tl) => (
+                  <button
+                    key={tl.id}
+                    onClick={() => setTargetLevel(tl.id)}
+                    className={`px-3 py-2 rounded-lg border-2 text-sm text-left transition ${
+                      targetLevel === tl.id ? 'border-indigo-600 bg-indigo-50' : 'border-gray-200 hover:border-gray-300'
+                    }`}
+                  >
+                    <span className="font-medium">{tl.label}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
             {error && <p className="text-red-600 text-sm mt-4">{error}</p>}
             <button
-              disabled={!goal}
+              disabled={!goal || !targetLevel}
               onClick={finishOnboarding}
               className="mt-8 w-full bg-indigo-600 disabled:bg-gray-300 text-white py-3 rounded-lg font-semibold"
             >
