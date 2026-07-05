@@ -20,7 +20,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const stored = localStorage.getItem('profenglish_user');
     if (getToken() && stored) {
-      setUserState(JSON.parse(stored));
+      try {
+        setUserState(JSON.parse(stored));
+      } catch {
+        clearToken();
+        localStorage.removeItem('profenglish_user');
+      }
     }
     setLoading(false);
   }, []);
