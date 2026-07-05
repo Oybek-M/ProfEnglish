@@ -106,10 +106,47 @@ export default function LessonPage() {
               <p className="font-semibold mb-1">Missiya:</p>
               <p>{lesson.mission}</p>
             </div>
-            <div className="bg-gray-50 p-4 rounded-lg">
+            <div className="bg-gray-50 p-4 rounded-lg mb-4">
               <p className="font-semibold mb-1">Vaziyat:</p>
               <p>{lesson.scenario}</p>
             </div>
+
+            <p className="font-semibold text-gray-700 mb-3">Bu darsda nima bo'ladi:</p>
+            <div className="space-y-2 mb-2">
+              <div className="flex items-center gap-3 border rounded-lg p-3">
+                <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <p className="text-sm text-gray-700">{lesson.vocabulary.length} ta yangi so'z, {lesson.phrases.length} ta tayyor ibora o'rganasiz</p>
+              </div>
+              <div className="flex items-center gap-3 border rounded-lg p-3">
+                <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <p className="text-sm text-gray-700">{lesson.exercises.length} ta interaktiv mashq bilan bilimingizni mustahkamlaysiz</p>
+              </div>
+              <div className="flex items-center gap-3 border rounded-lg p-3">
+                <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-4l-4 4v-4z" />
+                  </svg>
+                </div>
+                <p className="text-sm text-gray-700">AI bilan "{lesson.roleplayCharacter}" xarakterida rol-o'yin suhbat qurasiz</p>
+              </div>
+              <div className="flex items-center gap-3 border rounded-lg p-3">
+                <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                </div>
+                <p className="text-sm text-gray-700">Yozma vazifa bajarib, AI'dan darhol ball va fikr-mulohaza olasiz</p>
+              </div>
+            </div>
+
             <button type="button" onClick={() => setBlock(1)} className="mt-6 w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold">
               Davom etish
             </button>
