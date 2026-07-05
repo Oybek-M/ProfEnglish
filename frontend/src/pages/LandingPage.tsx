@@ -318,7 +318,7 @@ export default function LandingPage(): JSX.Element {
               </div>
               <h3 className="text-xl font-bold text-gray-900 text-center mb-3">Har kuni o'rganing</h3>
               <p className="text-gray-600 text-center">
-                AI har kuni sizga mos dars tayyorlaydi. 30 minutlik darslar bilan birgalikda o'rganing.
+                AI har kuni sizga mos dars tayyorlaydi. 30 daqiqalik darslar bilan birgalikda o'rganing.
               </p>
             </div>
           </div>
