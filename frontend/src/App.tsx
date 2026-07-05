@@ -6,6 +6,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import OnboardingPage from './pages/OnboardingPage';
 import DashboardPage from './pages/DashboardPage';
+import LessonPage from './pages/LessonPage';
 
 function PrivateRoute({ children }: { children: JSX.Element }) {
   const { user, loading } = useAuth();
@@ -33,6 +34,14 @@ export default function App() {
         element={
           <PrivateRoute>
             <DashboardPage />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/lesson"
+        element={
+          <PrivateRoute>
+            <LessonPage />
           </PrivateRoute>
         }
       />
