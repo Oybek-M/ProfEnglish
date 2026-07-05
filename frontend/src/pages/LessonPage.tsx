@@ -206,8 +206,13 @@ export default function LessonPage() {
                 placeholder="Inglizcha yozing..."
                 className="flex-1 border rounded-lg px-4 py-2"
               />
-              <button type="button" onClick={sendChatMessage} className="bg-indigo-600 text-white px-4 rounded-lg">
-                Yuborish
+              <button
+                type="button"
+                onClick={sendChatMessage}
+                disabled={chatLoading || !chatInput.trim()}
+                className="bg-indigo-600 disabled:bg-gray-300 text-white px-4 rounded-lg"
+              >
+                {chatLoading ? 'Yuborilmoqda...' : 'Yuborish'}
               </button>
             </div>
             <button type="button" onClick={() => setBlock(4)} className="mt-6 w-full bg-gray-200 py-3 rounded-lg font-semibold">
