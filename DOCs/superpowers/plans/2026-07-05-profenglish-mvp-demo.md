@@ -38,6 +38,10 @@ Standing rules for all follow-up work (same as the original 19 tasks): no `Co-Au
 ### Round 4 — auth session bug fix
 - `574b3ea` fix: **root cause found and fixed** for founder-reported bug "after logging in, going back to the home page and then logging in again is required." JWT/localStorage session itself was never actually lost — `LoginPage.tsx`/`RegisterPage.tsx` simply had no check for an already-authenticated user, so visiting `/login` or `/register` while a valid session existed unconditionally rendered the empty credentials form (looking exactly like a forced re-login). Fixed by adding the same `loading`/`user` guard pattern already used in `App.tsx`'s `PrivateRoute` to the top of both pages: if `loading`, show a loading state; if `user` already set, `<Navigate to="/dashboard" replace />` immediately. Live-verified: logged in → hard-navigated to `/` → clicked "Kirish" → landed directly on `/dashboard` (no form shown); same for `/register`; then cleared `localStorage` to simulate a real logged-out state and confirmed the login form still renders normally in that case (no regression).
 
+### Round 5 — small navigation/copy polish
+- `3149a11` fix: corrected wording on the landing page's "Har kuni o'rganing" feature card — "30 minutlik darslar" ("30 minute-ish lessons", awkward calque) → "30 daqiqalik darslar" (correct Uzbek for "30-minute lessons").
+- `a7ad47a` feat: founder asked for a way back to the home page from the Dashboard too (Login/Register already had it from Round 4). Added a clickable "ProfEnglish" wordmark (same gradient-text style used on Login/Register) linking to `/`, placed above the "Xush kelibsiz!" greeting in the Dashboard header. Live-verified in browser (screenshot confirms placement/rendering) plus `tsc --noEmit` (0 errors) and `npm run build` (succeeded).
+
 ---
 
 ## Task 1: Backend skeleton
