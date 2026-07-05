@@ -40,6 +40,15 @@ async function getOrGenerateLesson(profession, level, goal) {
   if (lesson.exercises.some((ex) => !Array.isArray(ex.options) || ex.options.length !== 4)) {
     throw new Error('AI_INVALID_SCHEMA');
   }
+  if (!Array.isArray(lesson.phrases) || lesson.phrases.length < 8) {
+    throw new Error('AI_INVALID_SCHEMA');
+  }
+  if (!Array.isArray(lesson.reviewWords) || lesson.reviewWords.length < 5) {
+    throw new Error('AI_INVALID_SCHEMA');
+  }
+  if (!Array.isArray(lesson.reviewPhrases) || lesson.reviewPhrases.length < 3) {
+    throw new Error('AI_INVALID_SCHEMA');
+  }
 
   cache[key] = { generatedAt: new Date().toISOString(), lesson };
   writeJson(CACHE_FILE, cache);
