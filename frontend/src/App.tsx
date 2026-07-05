@@ -5,6 +5,7 @@ import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import OnboardingPage from './pages/OnboardingPage';
+import DashboardPage from './pages/DashboardPage';
 
 function PrivateRoute({ children }: { children: JSX.Element }) {
   const { user, loading } = useAuth();
@@ -31,7 +32,7 @@ export default function App() {
         path="/dashboard"
         element={
           <PrivateRoute>
-            <div className="p-8">Dashboard tez orada</div>
+            <DashboardPage />
           </PrivateRoute>
         }
       />
