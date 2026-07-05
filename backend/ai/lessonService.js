@@ -19,11 +19,26 @@ async function getOrGenerateLesson(profession, level, goal) {
   const messages = buildLessonMessages(profession, level, goal);
   const raw = await callOpenRouter({ messages, jsonMode: true, maxTokens: 3000, temperature: 0.6 });
 
+  if (!raw || typeof raw !== 'string' || raw.trim().length === 0) {
+    throw new Error('AI_EMPTY_RESPONSE');
+  }
+
   let lesson;
   try {
     lesson = JSON.parse(raw);
   } catch (err) {
+    console.error('Failed to parse AI lesson response:', raw.slice(0, 500));
     throw new Error('AI_INVALID_JSON');
+  }
+
+  if (!Array.isArray(lesson.vocabulary) || lesson.vocabulary.length < 10) {
+    throw new Error('AI_INVALID_SCHEMA');
+  }
+  if (!Array.isArray(lesson.exercises) || lesson.exercises.length !== 5) {
+    throw new Error('AI_INVALID_SCHEMA');
+  }
+  if (lesson.exercises.some((ex) => !Array.isArray(ex.options) || ex.options.length !== 4)) {
+    throw new Error('AI_INVALID_SCHEMA');
   }
 
   cache[key] = { generatedAt: new Date().toISOString(), lesson };
