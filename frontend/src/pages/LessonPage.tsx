@@ -7,7 +7,14 @@ const BLOCKS = ['info', 'vocab', 'exercises', 'chat', 'final', 'review'];
 export default function LessonPage() {
   const navigate = useNavigate();
   const stored = sessionStorage.getItem('current_lesson');
-  const lesson: Lesson | null = stored ? JSON.parse(stored) : null;
+  let lesson: Lesson | null = null;
+  if (stored) {
+    try {
+      lesson = JSON.parse(stored);
+    } catch {
+      lesson = null;
+    }
+  }
 
   const [block, setBlock] = useState(0);
   const [exerciseAnswers, setExerciseAnswers] = useState<string[]>(
@@ -18,13 +25,12 @@ export default function LessonPage() {
     return (
       <div className="p-8 text-center">
         <p>Dars topilmadi.</p>
-        <button onClick={() => navigate('/dashboard')} className="text-indigo-600 mt-4">
+        <button type="button" onClick={() => navigate('/dashboard')} className="text-indigo-600 mt-4">
           Dashboard'ga qaytish
         </button>
       </div>
     );
   }
-
 
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4">
@@ -47,7 +53,7 @@ export default function LessonPage() {
               <p className="font-semibold mb-1">Vaziyat:</p>
               <p>{lesson.scenario}</p>
             </div>
-            <button onClick={() => setBlock(1)} className="mt-6 w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold">
+            <button type="button" onClick={() => setBlock(1)} className="mt-6 w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold">
               Davom etish
             </button>
           </div>
@@ -74,7 +80,7 @@ export default function LessonPage() {
                 </div>
               ))}
             </div>
-            <button onClick={() => setBlock(2)} className="mt-6 w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold">
+            <button type="button" onClick={() => setBlock(2)} className="mt-6 w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold">
               Mashqlarga o'tish
             </button>
           </div>
@@ -111,7 +117,7 @@ export default function LessonPage() {
                 </div>
               ))}
             </div>
-            <button onClick={() => setBlock(3)} className="mt-6 w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold">
+            <button type="button" onClick={() => setBlock(3)} className="mt-6 w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold">
               AI suhbatga o'tish
             </button>
           </div>
