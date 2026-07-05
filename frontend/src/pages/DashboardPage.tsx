@@ -11,17 +11,24 @@ export default function DashboardPage() {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!user?.profession) {
-      navigate('/onboarding');
-      return;
-    }
+  function fetchLesson() {
+    setLoading(true);
+    setError('');
     api
       .getCurrentLesson()
       .then((res) => setLesson(res.lesson))
       .catch(() => setError('Dars generatsiyasida xatolik yuz berdi'))
       .finally(() => setLoading(false));
-  }, [user]);
+  }
+
+  useEffect(() => {
+    if (!user?.profession) {
+      navigate('/onboarding');
+      return;
+    }
+    fetchLesson();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user?.profession, user?.id]);
 
   function goToLesson() {
     if (lesson) {
@@ -39,7 +46,17 @@ export default function DashboardPage() {
             <p className="text-gray-600">AI shaxsiy darsingizni tayyorlamoqda...</p>
           </>
         )}
-        {!loading && error && <p className="text-red-600">{error}</p>}
+        {!loading && error && (
+          <>
+            <p className="text-red-600 mb-4">{error}</p>
+            <button
+              onClick={fetchLesson}
+              className="w-full bg-gray-400 text-white py-2 rounded-lg font-semibold hover:bg-gray-500"
+            >
+              Qayta urinish
+            </button>
+          </>
+        )}
         {!loading && lesson && (
           <>
             <h2 className="text-xl font-bold mb-2">{lesson.title}</h2>
