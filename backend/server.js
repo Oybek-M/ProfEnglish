@@ -4,6 +4,7 @@ const authRoutes = require('./routes/authRoutes');
 const onboardingRoutes = require('./routes/onboardingRoutes');
 const lessonRoutes = require('./routes/lessonRoutes');
 const chatRoutes = require('./routes/chatRoutes');
+const evaluationRoutes = require('./routes/evaluationRoutes');
 
 const app = express();
 app.use(express.json());
@@ -12,6 +13,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/onboarding', onboardingRoutes);
 app.use('/api/lesson', lessonRoutes);
 app.use('/api/chat', chatRoutes);
+app.use('/api/evaluation', evaluationRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
