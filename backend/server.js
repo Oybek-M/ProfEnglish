@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const config = require('./config');
 const authRoutes = require('./routes/authRoutes');
 const onboardingRoutes = require('./routes/onboardingRoutes');
@@ -19,7 +20,12 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
+const frontendDist = path.join(__dirname, '..', 'frontend', 'dist');
+app.use(express.static(frontendDist));
+app.use((req, res) => {
+  res.sendFile(path.join(frontendDist, 'index.html'));
+});
+
 app.listen(config.port, () => {
   console.log(`ProfEnglish backend ${config.port}-portda ishga tushdi`);
-  console.log('Auth routes mounted successfully');
 });
