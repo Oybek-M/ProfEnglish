@@ -1,0 +1,222 @@
+PROFENGLISH STARTAP LOYIHASI TEZISI
+Loyiha nomi
+ProfEnglish – Kasbiy yo'nalishlar uchun sun'iy intellekt asosidagi ingliz tili platformasi
+Loyihaning dolzarbligi
+Bugungi kunda ko'plab mutaxassislar umumiy ingliz tilini bilsalar ham, o'z kasbiga oid terminologiya, hujjatlar, mijoz bilan muloqot yoki ish jarayonida ingliz tilidan foydalanishda qiyinchiliklarga duch keladilar. Mavjud platformalar asosan umumiy ingliz tiliga yo'naltirilgan bo'lib, kasbiy ehtiyojlarni yetarli darajada qamrab olmaydi.
+ProfEnglish ushbu muammoni har bir soha uchun alohida ishlab chiqilgan o'quv metodikasi va sun'iy intellekt yordamida hal qilishni maqsad qiladi.
+Loyiha maqsadi
+Foydalanuvchining kasbiga mos ingliz tilini amaliy mashg'ulotlar, adaptiv topshiriqlar va AI yordamida samarali o'rgatadigan zamonaviy platforma yaratish.
+Asosiy g'oya
+Platformaga ro'yxatdan o'tgan foydalanuvchi avvalo:
+kasbini tanlaydi;
+ingliz tili darajasini aniqlovchi test topshiradi;
+maqsadini belgilaydi (ishga kirish, IELTS, xorijda ishlash, xalqaro mijozlar bilan ishlash va boshqalar).
+Shundan so'ng tizim foydalanuvchi uchun individual o'quv yo'lini shakllantiradi.
+Har bir dars quyidagi ketma-ketlikda tashkil etiladi:
+Sohaga oid yangi so'z va iboralar.
+Real ish vaziyatiga asoslangan dialog.
+Interaktiv mashqlar.
+AI bilan yozma yoki og'zaki muloqot.
+Mini test.
+O'zlashtirish natijasiga qarab keyingi darsni tavsiya qilish.
+Platformaning asosiy funksiyalari
+Kasbiy yo'nalishni tanlash (Medical, Business, IT, Agro, Engineering va boshqalar).
+AI yordamida bilim darajasini aniqlash.
+Adaptiv o'quv tizimi.
+Sohaga mos lug'at va terminologiya.
+Real ish vaziyatlari (Case Study).
+AI Chat orqali ingliz tilida suhbat qilish.
+Speaking va Writing bo'yicha avtomatik tahlil.
+Kundalik mashqlar.
+Progress statistikasi.
+Sertifikatlash tizimi.
+Video darslarning o'rni
+Platformada video darslar mavjud bo'ladi, biroq ular asosiy o'quv materiali hisoblanmaydi. Video faqat murakkab mavzularni tushuntirish yoki qo'shimcha izoh berish uchun ishlatiladi. Asosiy ta'lim jarayoni interaktiv mashqlar, AI bilan muloqot va amaliy topshiriqlar orqali olib boriladi. Bu yondashuv platformani tez rivojlantirish, kontentni muntazam yangilash va foydalanuvchini faol ishtirok etishga undash imkonini beradi.
+Platforma arxitekturasi
+Foydalanuvchi qismi
+Android ilovasi
+iOS ilovasi
+Veb platforma
+Administrator paneli
+Kurslarni boshqarish
+Savollar bazasini tahrirlash
+Foydalanuvchilar statistikasi
+To'lovlarni boshqarish
+Sertifikatlarni nazorat qilish
+AI moduli
+Shaxsiy tavsiyalar
+Speaking baholash
+Writing tekshirish
+Chat Assistant
+Adaptiv o'qitish algoritmi
+Loyiha afzalliklari
+Har bir kasb uchun alohida metodika.
+Nazariyadan ko'ra ko'proq amaliyot.
+Sun'iy intellekt asosida shaxsiylashtirilgan ta'lim.
+Tez yangilanadigan kontent.
+Kam xarajat bilan kengaytirish imkoniyati.
+Korporativ mijozlar uchun moslashtiriladigan tizim.
+Kutilayotgan natijalar
+ProfEnglish foydalanuvchilarga qisqa vaqt ichida o'z kasbiy faoliyatida zarur bo'lgan ingliz tilini egallash imkonini beradi. Platforma nafaqat individual foydalanuvchilar, balki universitetlar, o'quv markazlari va kompaniyalar uchun ham kasbiy ingliz tilini o'qitish bo'yicha samarali raqamli yechimga aylanishi ko'zda tutiladi.
+Xulosa
+ProfEnglish — bu umumiy ingliz tili kursi emas, balki turli kasb egalari uchun maxsus ishlab chiqilgan, sun'iy intellekt bilan qo'llab-quvvatlanadigan adaptiv ta'lim platformasidir. Loyihaning asosiy ustunligi foydalanuvchining kasbi, bilim darajasi va maqsadiga mos individual o'quv yo'lini shakllantirish hamda nazariy bilimlarni real ish jarayonlariga yaqin amaliy mashqlar orqali mustahkamlashdan iborat.
+
+ProfEnglish — Dars Generatsiyasi uchun AI Prompt
+Bu promptni ProfEnglish platformasidagi AI modulga (dars generatsiya qiluvchi tizim promti / system prompt sifatida) to'g'ridan-to'g'ri joylashtirishingiz mumkin.
+SYSTEM PROMPT
+Sen ProfEnglish platformasi uchun ishlaydigan professional ingliz tili metodisti va Instructional Designersan.
+Sening vazifang — oddiy ingliz tili darsi emas, balki foydalanuvchining kasbiy faoliyatida ingliz tilidan foydalanish ko'nikmasini rivojlantiradigan interaktiv, vazifaga asoslangan (task-based) dars yaratish.
+Asosiy tamoyil: Har bir dars yakunida foydalanuvchi bitta aniq kasbiy vazifani ingliz tilida mustaqil bajara olishi kerak. Dars grammatikaga emas, real ish jarayoni va amaliy muloqotga asoslanadi.
+Har bir darsni quyidagi 10 bosqichli tuzilma bo'yicha, aynan shu tartibda yarat:
+1-BOSQICH: Dars haqida ma'lumot
+Quyidagilarni ko'rsat:
+Dars nomi
+Kasbiy yo'nalish (IT, Business, Medical, Agro, Engineering va h.k.)
+Ingliz tili darajasi (A1–C2)
+Dars davomiyligi (daqiqada)
+Darsning asosiy maqsadi (1 jumla)
+Rivojlantiriladigan aniq kasbiy ko'nikma
+2-BOSQICH: Missiya (Mission)
+Foydalanuvchiga dars boshida bitta real, aniq va qisqa vazifa ber. Vazifa hayotiy, tushunarli va kasbga mos bo'lishi shart.
+Namuna uslub: "Siz bugun yangi mijoz bilan uchrashuv o'tkazasiz." / "Siz bemorni qabul qilayotgan shifokorsiz." / "Siz HR bilan ish suhbatidasiz."
+3-BOSQICH: Vaziyat (Scenario)
+Missiyaga mos ish muhitini tasvirla — kim bilan, qayerda, qanday sharoitda muloqot bo'lishini aniq tasavvur qildiradigan tarzda yoz. Bu quruq matn emas, foydalanuvchi o'zini shu muhit ichida his qilishi kerak.
+4-BOSQICH: Professional tayyorgarlik
+Missiyani bajarish uchun zarur bilimlarni ber:
+a) Yangi so'zlar — 10–15 ta eng muhim kasbiy so'z. Har biri uchun:
+ma'nosi (o'zbek tilida)
+talaffuzi (transkripsiya)
+kasbiy kontekstdagi misol jumla
+b) Tayyor iboralar — 8–10 ta ish jarayonida ishlatiladigan tayyor ibora. Har birida qachon ishlatilishi ko'rsatilsin.
+c) Muloqot ketma-ketligi — vaziyatda gaplashish tartibini bosqichma-bosqich ko'rsat (masalan: Salomlashish → Tanishtirish → Savol berish → Muammoni aniqlash → Yechim taklif qilish → Yakunlash).
+5-BOSQICH: AI bilan mashq
+Foydalanuvchini bosqichma-bosqich mashq qildir: avval oson savollar, keyin asta-sekin murakkablashib boruvchi vaziyatlar. Har bir qadamda foydalanuvchini yo'naltirib bor, xato qilsa darhol tuzatib, qayta urinish imkonini ber.
+6-BOSQICH: Interaktiv mashqlar
+Quyidagi turlardan foydalanib, faqat shu kasbiy vaziyatga oid mashqlar tuz:
+Moslashtirish (matching)
+Bo'sh joyni to'ldirish
+Gaplarni tartibga solish
+Xatoni topish
+To'g'ri javobni tanlash
+Dialogni davom ettirish
+7-BOSQICH: AI bilan jonli suhbat (Role-play)
+AI kasbga mos rolni o'z zimmasiga oladi (shifokor, mijoz, investor, HR menejer, bemor, dasturchi, fermer, muhandis va h.k.) va foydalanuvchi bilan tabiiy suhbat yuritadi. Suhbat davomida vaziyat asta-sekin murakkablashib borishi kerak.
+8-BOSQICH: Yakuniy sinov
+AI endi hech qanday yordam bermaydi. Foydalanuvchi butun vaziyatni boshidan oxirigacha mustaqil, real vaqt rejimida hal qiladi. Bu darsning asosiy baholanadigan sinovi.
+9-BOSQICH: AI baholashi
+Yakuniy sinov natijasiga ko'ra quyidagi mezonlar bo'yicha baho ber, har biriga qisqa tavsiya qo'shib:
+Lug'at boyligi
+Grammatika
+Talaffuz
+Ravon gapirish
+Kasbiy iboralardan foydalanish
+Muloqot sifati
+Ishonchlilik
+10-BOSQICH: Takrorlash uchun saqlash
+Dars yakunida quyidagilarni keyingi darslarda takrorlash uchun ro'yxat qilib chiqar:
+Yangi o'rganilgan so'zlar
+Foydalanuvchi qilgan xatolar
+Eng muhim iboralar
+MAJBURIY QOIDALAR
+Darsning asosiy qismi amaliyotdan iborat bo'lsin, nazariya minimal bo'lsin.
+Grammatika faqat zarur bo'lgan joyda, juda qisqa tushuntirilsin.
+Video — asosiy dars emas, faqat qo'shimcha material sifatida taklif etilishi mumkin.
+AI foydalanuvchi bilan darsning boshidan oxirigacha doimiy muloqotda bo'lsin, hech qachon uzoq monolog bermasin.
+Har bir dars foydalanuvchini aniq bitta kasbiy vazifani ingliz tilida bajarishga tayyorlashi shart.
+
+Har bir dars real ish hayotidagi vaziyatga asoslangan bo'lishi shart — mavhum yoki umumiy mavzular berilmasin.
+Til darajasi (A1–C2) butun dars davomida izchil saqlanishi kerak — so'zlar, iboralar va suhbat murakkabligi shu darajaga mos bo'lsin.
+Har bir bosqich o'zidan oldingi bosqichda o'rgatilgan so'z/ibora/ko'nikmaga tayanishi kerak — bosqichlar bir-biridan uzilib qolmasligi lozim.
+KIRISH PARAMETRLARI (dars generatsiya qilishda foydalanuvchidan/tizimdan olinadigan ma'lumotlar)
+Dars yaratishni boshlashdan oldin quyidagi 4 ta parametr berilishi kerak, shularsiz dars generatsiya qilinmasin:
+Kasb (masalan: IT, Medical, Business, Agro, Engineering, Tourism, Law)
+Til darajasi (A1–C2)
+Foydalanuvchi maqsadi (ishga kirish, IELTS, xorijda ishlash, xalqaro mijozlar bilan ishlash va h.k.)
+Oldingi darslarda o'rganilgan so'z/xatolar ro'yxati (agar mavjud bo'lsa — takrorlash uchun integratsiya qilinsin)
+Agar shu 4 ta parametrdan biri berilmagan bo'lsa, standart daraja va umumiy kasbiy stsenariy asosida dars tuzilsin, lekin bu holat foydalanuvchiga bildirilsin.
+CHIQISH FORMATI
+Javobni yuqoridagi 10 bosqichga mos, aniq sarlavhalar bilan, tizim (masalan, platforma frontendi) osongina JSON yoki struktura qilib bo'lakларга ajrata oladigan tartibda taqdim et. Har bir bosqich alohida, aniq belgilangan blok sifatida chiqarilsin.
+
+ProfEnglish — Base44 uchun to'liq loyiha prompti
+Quyidagi promtni Base44'ga to'liq, bo'lim-bo'lim yoki bir butun holda kiritishingiz mumkin. Matn ataylab juda batafsil yozilgan — tizim mantiqi, dizayn, sahifalar va ma'lumotlar tuzilishi aniq ko'rsatilgan, shunda Base44 taxminlar qilmasdan aniq loyihani quradi.
+PROMPT (Base44'ga to'g'ridan-to'g'ri kiritish uchun)
+Men "ProfEnglish" nomli veb-ilova yaratmoqchiman — bu turli kasb egalari uchun sun'iy intellekt yordamida shaxsiylashtirilgan ingliz tili o'rgatuvchi ta'lim platformasi. Quyida tizimning to'liq tuzilishi, foydalanuvchi oqimi, dizayn yo'nalishi va funksionalligi tavsiflangan. Iltimos, shularga asoslanib to'liq ishlaydigan ilova yarating.
+1. Umumiy g'oya
+ProfEnglish — umumiy ingliz tili kursi emas, balki har bir kasb (Medical, IT, Business, Agro, Engineering va h.k.) uchun alohida metodika bilan ishlaydigan, sun'iy intellekt asosida adaptiv ta'lim beruvchi platforma. Foydalanuvchi o'z kasbini, darajasini va maqsadini tanlaydi, tizim esa unga mos individual o'quv yo'lini avtomatik shakllantiradi.
+2. Foydalanuvchi ro'yxatdan o'tish va onboarding oqimi
+Ro'yxatdan o'tishdan so'ng foydalanuvchi quyidagi bosqichlardan ketma-ket o'tadi (har biri alohida ekran/qadam, progress-bar bilan ko'rsatilsin):
+Kasbni tanlash — kartochka ko'rinishidagi tanlov: Medical, IT, Business, Agro, Engineering, Tourism, Law va h.k. (kengaytiriladigan ro'yxat sifatida bazada saqlansin).
+Daraja aniqlovchi test — 15-20 ta savoldan iborat adaptiv test (grammatika, lug'at, tushunish). Test yakunida foydalanuvchiga A1–C1 darajasi beriladi.
+Maqsadni belgilash — bir nechta variant: ishga kirish uchun, IELTS/imtihon uchun, xorijda ishlash, xalqaro mijozlar bilan muloqot, karyera o'sishi.
+Ushbu 3 ta ma'lumot (kasb, daraja, maqsad) asosida tizim individual o'quv yo'lini (learning path) generatsiya qiladi va foydalanuvchini bosh sahifaga (Dashboard) yo'naltiradi.
+3. Dars strukturasi (har bir dars quyidagi 6 bosqichdan iborat bo'lishi kerak)
+Yangi so'z va iboralar — flashcard ko'rinishida, audio talaffuz bilan.
+Real ish vaziyatiga asoslangan dialog — kasbga oid stsenariy (masalan, shifokor-bemor, IT-mijoz).
+Interaktiv mashqlar — bo'shliqni to'ldirish, moslashtirish, ko'p tanlovli savollar.
+AI bilan yozma yoki og'zaki muloqot — chat oynasi orqali AI bilan real vaziyatni simulyatsiya qilish.
+Mini test — 5-10 savoldan iborat qisqa test.
+Natija va tavsiya — natijaga qarab keyingi darsni avtomatik tavsiya qilish yoki takrorlashni taklif qilish.
+Har bir dars yakunida progress avtomatik saqlanishi va foydalanuvchi profiliga yozilishi kerak.
+4. Asosiy sahifalar/ekranlar ro'yxati
+Landing page (tashqi, login qilinmagan foydalanuvchilar uchun): loyiha haqida qisqacha, afzalliklar, "Bepul boshlash" tugmasi.
+Ro'yxatdan o'tish / Kirish (email, Google orqali).
+Onboarding (yuqorida tasvirlangan 3 bosqich).
+Dashboard (bosh sahifa): joriy progress, keyingi tavsiya etilgan dars, kunlik maqsad, statistik ko'rsatkichlar (streak, umumiy ball).
+Kurslar sahifasi: kasb bo'yicha modullar ro'yxati, har biri progress-bar bilan.
+Dars sahifasi: yuqoridagi 6 bosqichli struktura shu yerda amalga oshadi.
+AI Chat Assistant: alohida bo'lim, foydalanuvchi istalgan vaqtda AI bilan erkin muloqot qilishi mumkin (kasbga oid mavzularda).
+Speaking/Writing tekshirish sahifasi: foydalanuvchi audio yozadi yoki matn kiritadi, AI baholaydi va xatolarni ko'rsatadi (grammatika, talaffuz, ravonlik bo'yicha izoh bilan).
+Progress/Statistika sahifasi: grafiklar orqali haftalik/oylik rivojlanish, kuchli va zaif tomonlar.
+Sertifikatlar sahifasi: yakunlangan darajalar uchun olingan sertifikatlar ro'yxati, yuklab olish imkoniyati.
+Profil sozlamalari: shaxsiy ma'lumotlar, kasb/maqsadni o'zgartirish, obuna holati.
+Narxlar/Obuna sahifasi: tariflar (Free, Pro, Corporate) taqqoslanadigan jadval ko'rinishida.
+5. Administrator paneli (alohida rol — admin)
+Kurslar va modullarni qo'shish/tahrirlash/o'chirish.
+Savollar bazasini boshqarish (test, mashq, mini-test savollari).
+Foydalanuvchilar ro'yxati va ularning statistikasi (faollik, progress, to'lov holati).
+
+To'lovlarni va obunalarni boshqarish.
+Sertifikatlarni tasdiqlash/nazorat qilish.
+Kontent yangilanishi tarixi (log).
+6. AI moduli — funksional talablar
+Shaxsiy tavsiyalar: foydalanuvchi natijalariga qarab keyingi mavzu/darsni tavsiya qilish algoritmi.
+Speaking baholash: audio yozuvni matnga aylantirib (yoki to'g'ridan-to'g'ri), talaffuz, ravonlik va grammatika bo'yicha baho va izoh berish.
+Writing tekshirish: kiritilgan matndagi grammatik, leksik xatolarni topib, tuzatilgan variant va tushuntirish berish.
+Chat Assistant: foydalanuvchi kasbiga mos rolli-o'yin (role-play) suhbatlarni yuritish (masalan, "mijoz bilan telefon suhbati" simulyatsiyasi).
+Adaptiv algoritm: agar foydalanuvchi mini-testda past ball olsa, tizim avtomatik ravishda o'sha mavzuni qayta mustahkamlovchi qo'shimcha mashqlarni taklif qiladi.
+7. Ma'lumotlar bazasi tuzilishi (asosiy obyektlar/entities)
+User: ism, email, kasb, daraja, maqsad, ro'yxatdan o'tgan sana, obuna turi.
+Profession: nomi, tavsifi, unga tegishli modullar ro'yxati.
+Module/Course: kasbga bog'liq, dars ro'yxati, daraja (A1-C1).
+Lesson: so'zlar/iboralar ro'yxati, dialog matni, mashqlar, mini-test savollari.
+Vocabulary: so'z, tarjima, audio, misol jumla, tegishli kasb/modul.
+Progress: foydalanuvchi ID, dars ID, ball, sana, holat (tugallangan/jarayonda).
+TestResult: foydalanuvchi ID, test turi, ball, sana.
+Certificate: foydalanuvchi ID, daraja, berilgan sana, fayl/link.
+ChatHistory: foydalanuvchi ID, AI suhbat matni, sana.
+Payment/Subscription: foydalanuvchi ID, tarif turi, muddat, holat.
+8. Dizayn yo'nalishi (vizual uslub)
+Umumiy uslub: zamonaviy, toza (clean), professional — "edtech + korporativ" uyg'unligi, ortiqcha bezaksiz, ishonchli ko'rinish.
+Rang palitrasi: asosiy rang sifatida chuqur ko'k yoki indigo (ishonch va professionallikni bildiradi), unga qo'shimcha aksent rang sifatida yorqin yashil yoki to'q sariq (progress, muvaffaqiyatni ko'rsatish uchun); fon — oq/och kulrang, matn — to'q kulrang/qora.
+Tipografika: zamonaviy sans-serif shrift (masalan, Inter yoki shunga o'xshash), sarlavhalar qalin (bold), matn oson o'qiladigan hajmda.
+Komponentlar: yumaloq burchakli kartochkalar (rounded corners), yengil soyalar (subtle shadow), progress-barlar va doiraviy indikatorlar orqali vizual progress ko'rsatish.
+Kasb bo'yicha vizual farqlash: har bir kasb yo'nalishi (Medical, IT, Business va h.k.) uchun alohida rang-belgi/ikonka, shunda foydalanuvchi tez tanib oladi.
+Mobil-first yondashuv: barcha sahifalar avval mobil ekranga moslab, so'ng desktopga moslashtirilgan (responsive) bo'lishi shart.
+Motivatsion elementlar: streak (ketma-ket kunlar), badge/yutuqlar, progress-bar animatsiyalari — foydalanuvchini faol ushlab turish uchun.
+Video darslarning o'rni: video kontent faqat "Qo'shimcha material" blokida, asosiy dars oqimidan alohida joylashtirilsin — asosiy o'qitish interaktiv mashqlar va AI orqali bo'ladi.
+9. Monetizatsiya / tariflar
+Free: cheklangan darslar soni, asosiy AI chat funksiyasi cheklangan.
+Pro (individual): barcha modullarga to'liq kirish, AI Speaking/Writing tekshiruvi cheksiz, sertifikat olish imkoniyati.
+Corporate: kompaniyalar uchun ko'plab xodimlarni boshqarish, guruh statistikasi, moslashtirilgan kontent.
+10. Texnik talablar
+Autentifikatsiya (email + Google login).
+Rol asosidagi kirish huquqi (User / Admin).
+Har bir foydalanuvchi progressi real vaqtda saqlanishi va Dashboard'da ko'rinishi kerak.
+AI funksiyalari uchun tashqi til modeliga (LLM) ulanish imkoniyati ko'zda tutilsin (matnni tahlil qilish, suhbat yuritish, baholash uchun).
+Statistikalar grafik ko'rinishida (chart/diagram) taqdim etilsin.
+Qo'shimcha maslahat
+Base44'ga promtni bo'lib-bo'lib kiritish (avval umumiy tuzilma, keyin har bir sahifani alohida so'rash) ko'pincha yaxshiroq natija beradi, chunki tizim bir vaqtning o'zida juda ko'p sahifani chuqur ishlab chiqa olmasligi mumkin. Tavsiya:
+Avval 1–7-bo'limlarni yuborib, asosiy tuzilma va ma'lumotlar bazasini qurdiring.
+Keyin 8-bo'lim (dizayn) alohida so'rov sifatida yuboring — "hozirgi loyihaga shu dizayn yo'nalishini qo'lla" deb.
+
+So'ngra AI moduli va admin panelni alohida-alohida so'rovlar bilan chuqurlashtiring.
