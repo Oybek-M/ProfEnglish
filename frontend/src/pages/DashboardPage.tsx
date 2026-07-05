@@ -12,6 +12,18 @@ interface ProgressItem {
   completedAt: string;
 }
 
+const UZ_WEEKDAYS = ['Yakshanba', 'Dushanba', 'Seshanba', 'Chorshanba', 'Payshanba', 'Juma', 'Shanba'];
+const UZ_MONTHS = [
+  'yanvar', 'fevral', 'mart', 'aprel', 'may', 'iyun',
+  'iyul', 'avgust', 'sentabr', 'oktabr', 'noyabr', 'dekabr',
+];
+
+function formatUzDate(date: Date, withWeekday = true): string {
+  const day = date.getDate();
+  const month = UZ_MONTHS[date.getMonth()];
+  return withWeekday ? `${UZ_WEEKDAYS[date.getDay()]}, ${day}-${month}` : `${day}-${month}`;
+}
+
 export default function DashboardPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -84,13 +96,7 @@ export default function DashboardPage() {
             <h1 className="text-3xl font-bold text-gray-900">
               Xush kelibsiz! 👋
             </h1>
-            <p className="text-sm text-gray-500 mt-1">
-              {new Date().toLocaleDateString('uz-Latn-UZ', {
-                weekday: 'long',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </p>
+            <p className="text-sm text-gray-500 mt-1">{formatUzDate(new Date())}</p>
           </div>
           <button
             type="button"
@@ -213,7 +219,7 @@ export default function DashboardPage() {
                         Dars #{progress.length - idx}
                       </p>
                       <p className="text-xs text-gray-500">
-                        {new Date(item.completedAt).toLocaleDateString('uz-Latn-UZ')}
+                        {formatUzDate(new Date(item.completedAt), false)}
                       </p>
                     </div>
                     <div className="text-right">
