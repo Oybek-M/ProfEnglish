@@ -1,12 +1,12 @@
 # ProfEnglish VPS Deploy (Docker'siz)
 
-## Real production holati (2026-07-06 dan boshlab jonli)
+## Real production holati (2026-07-13 dan boshlab: profenglish.uz)
 
 - **VPS:** `109.199.108.248` (Ubuntu 24.04), boshqa loyihalar bilan bir xil shared VPS (`/var/www/` ostida `ibos_crm`, `SmartCrm` va h.k. bilan bir qatorda)
-- **Domen:** `https://profenglish.ibos.uz` (ahost'dagi `ibos.uz` domenidan sub-domain, A-record shu VPS IP'ga yo'naltirilgan)
+- **Domen:** `https://profenglish.uz` (+ `www.profenglish.uz`) — ahost'dan sotib olingan mustaqil domen. Ilgari `profenglish.ibos.uz` sub-domenida ishlagan, 2026-07-13'da to'liq shu yangi domenga ko'chirildi (eski subdomain Nginx config va SSL sertifikati o'chirildi, redirect ham qoldirilmadi — founder talabi bo'yicha).
 - **Path:** `/var/www/profenglish`
 - **Process manager:** PM2 (`pm2 restart profenglish` / `pm2 logs profenglish`) — server reboot bo'lsa ham avtomatik ishga tushadi (`pm2 startup` + `pm2 save` sozlangan)
-- **SSL:** Let's Encrypt (certbot), avtomatik yangilanadi, muddati 2026-10-03
+- **SSL:** Let's Encrypt (certbot), avtomatik yangilanadi, muddati 2026-10-11 (`profenglish.uz` + `www.profenglish.uz` bitta sertifikatda)
 - **SSH kirish:** parol emas, alohida deploy-key (`~/.ssh/profenglish_deploy_ed25519` — mahalliy dev mashinada) orqali, `root@109.199.108.248`. VPS root paroli faqat shu kalitni bir martalik o'rnatish uchun ishlatildi va boshqa hech qayerda saqlanmadi.
 - **Foydalanuvchi ma'lumotlari:** `backend/data/users.json` va `progress.json` production'da faqat 3 ta hisobni saqlaydi — `oybek@gmail.com` (asoschi), `demo.it@profenglish.uz`, `demo.biznes@profenglish.uz` (test/demo hisoblar uchun). Boshqa barcha test email'lar (`test_*@example.com`, `smoketest1`, `prodtest1`, `visualcheck`, `flowcheck1` va h.k.) o'chirilgan. `lessons-cache.json` foydalanuvchiga bog'liq emas (kalit: `profession_level_goal`), shuning uchun to'liq saqlab qolindi.
 
